@@ -1,0 +1,16 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2768
+
+Experiment to enable vim being invoked as a script interpreter, even when the vimscript block in question is used within a  unix pipe.
+
+This is basically my take on the original vimscript#1069 vimsh from 2004,  sufficiently mangled until it finally did mostly work again with unix pipes and using vim 7.2 (excluding the g//p issue, where the prints  get replicated all over the place - drop me a line if you have an idea). 
+
+Note that vim still does some unnecessary screen redrawing if it is connected to a  tty, however I
+actually  managed  to run a vimscript even from a cronjob, much to  my surprise.
+
+Further information and example vimscript blocks: see --help.
+
+I'll intend to keep this somewhat uptodate, at least until vim can be run non-interactively without the requirements for such a hack.
+
+The current version is available from:
+http://jakobi.github.com/script-archive-doc/
+http://github.com/jakobi/script-archive/tree/master/vim/
